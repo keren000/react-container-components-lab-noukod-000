@@ -29,6 +29,7 @@ class SearchableMovieReviewsContainer extends Component {
     return (
       <div className="searchable-movie-reviews">
         <form onSubmit={this.handleSubmit}>
+<<<<<<< HEAD
           <strong>Search for a Movie:</strong>
           <br />
           <input
@@ -47,4 +48,20 @@ class SearchableMovieReviewsContainer extends Component {
 
 
 
+=======
+          <input type="text"
+                  name="search"
+                  onChange={event => this.setState({searchTerm: event.target.value})}
+                  value={this.state.search}>
+          </input>
+          <button type="submit">Submit</button>
+        </form>
+        { this.state.reviews.length > 0 && <h2>Movie Review By Search:</h2> }
+        <MovieReviews reviews={this.state.reviews} />
+      </div>
+    )
+  }
+}
+
+>>>>>>> c23f223a002b55000e3185e63c5f8b4e4d3aa4d1
 export default SearchableMovieReviewsContainer
